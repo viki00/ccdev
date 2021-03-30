@@ -1,0 +1,6 @@
+---
+bootstrap:
+  dcs:
+    postgresql:
+      parameters:
+        archive_command: "source /opt/cpm/bin/pgbackrest/pgbackrest-archive-push-local-s3.sh %p"

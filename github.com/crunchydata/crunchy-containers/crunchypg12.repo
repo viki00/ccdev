@@ -1,0 +1,25 @@
+[crunchypg12]
+#Config Version 1.0
+name=Crunchy Data Development PostgreSQL 12 $releasever - $basearch
+baseurl=https://repo.developers.crunchydata.com/postgresql12/centos/EL$releasever/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-crunchydata-dev
+
+
+[crunchypg12-source]
+#Config Version 1.0
+name=Crunchy Data Development PostgreSQL 12 $releasever - Source
+baseurl=https://repo.developers.crunchydata.com/postgresql12/centos/EL$releasever/SRPMS/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-crunchydata-dev
+
+
+[crunchypg12-debuginfo]
+#Config Version 1.0
+name=Crunchy Data Development PostgreSQL 12 $releasever - Debug
+baseurl=https://repo.developers.crunchydata.com/postgresql12/centos/EL$releasever/debug/
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-crunchydata-dev
