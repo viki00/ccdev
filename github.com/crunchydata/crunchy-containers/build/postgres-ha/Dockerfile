@@ -35,7 +35,7 @@ RUN if [ "$DFSET" = "centos" ] ; then \
         	$( printf '11\n'${PG_MAJOR} | sort -VC && echo postgresql${PG_MAJOR}-llvmjit ) \
         	psmisc \
         	rsync \
-                https://download.postgresql.org/pub/repos/yum/12/redhat/rhel-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm \
+                https://download.postgresql.org/pub/repos/yum/12/redhat/rhel-8.3-x86_64/pgdg-redhat-repo-42.0-11.noarch.rpm \
         	less \
         	wal2json${PG_MAJOR//.} \
         && ${PACKAGER} -y clean all ; \
@@ -75,6 +75,7 @@ RUN if [ "$DFSET" = "centos" ] ; then \
        ${PACKAGER} -y install \
         	--setopt=skip_missing_names_on_install=False \
         	powa_${PG_MAJOR//.}-${POWA_VER}.x86_64 \
+        	pg_wait_sampling_${PG_MAJOR//.}-${WTSMPL_VER}.x86_64 \
         && ${PACKAGER} -y clean all ; \
 fi
 
